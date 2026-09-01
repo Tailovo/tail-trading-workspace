@@ -1,0 +1,12 @@
+flowchart TB
+    UI[Electron 桌面控制台] --> CP[市场无关控制层]
+    CP --> SIGNAL[信号与跟单关系]
+    CP --> STRATEGY[自主策略生命周期]
+    CP --> RISK[账户、组合与风险]
+    CP --> INTENT[幂等订单意图]
+    CP --> STATE[核对、恢复与证据]
+    INTENT -. 市场适配 .-> SOL[Solana]
+    INTENT -. 市场适配 .-> CEX[数字资产交易平台]
+    INTENT -. 市场适配 .-> CN[A股]
+    INTENT -. 市场适配 .-> OTHER[其他市场]
+    STATE --> UI

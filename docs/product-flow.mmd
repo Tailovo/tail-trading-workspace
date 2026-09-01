@@ -1,0 +1,10 @@
+flowchart LR
+    EVENT[市场或账户事件] --> NORMALIZE[规范化]
+    NORMALIZE --> DECIDE[跟单或策略决策]
+    DECIDE --> CHECK[账户、组合与能力检查]
+    CHECK --> INTENT[幂等订单意图]
+    INTENT --> ADAPTER[市场适配器]
+    ADAPTER --> RESULT[执行回报]
+    RESULT --> RECON[核对与状态收敛]
+    RECON --> EVIDENCE[事件与证据]
+    EVIDENCE --> OBSERVE[控制台与告警]

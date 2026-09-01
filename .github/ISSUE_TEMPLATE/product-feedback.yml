@@ -1,0 +1,49 @@
+name: 产品建议
+description: 提交真实工作场景、问题和产品建议
+title: "[建议] "
+labels:
+  - product-feedback
+body:
+  - type: markdown
+    attributes:
+      value: 请勿提交私钥、令牌、真实账户或未脱敏交易信息。
+  - type: dropdown
+    id: user_type
+    attributes:
+      label: 使用者类型
+      options:
+        - 量化研究者
+        - 策略开发者
+        - 跟单系统使用者
+        - 软件开发者
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: current_workflow
+    attributes:
+      label: 当前工作方式
+      description: 现在怎样完成这项工作？
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 核心问题
+      description: 最浪费时间、最容易出错或风险最高的步骤是什么？
+    validations:
+      required: true
+  - type: textarea
+    id: expected_result
+    attributes:
+      label: 期望结果
+      description: 什么结果能证明问题真正得到解决？
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: 信息安全确认
+      options:
+        - label: 我没有提交私钥、令牌、真实账户或未脱敏交易信息。
+          required: true

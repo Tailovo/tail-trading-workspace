@@ -1,0 +1,32 @@
+name: 研究问题
+description: 讨论交易系统架构、可靠性、规模和市场适配问题
+title: "[研究] "
+labels:
+  - research
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: 问题
+      description: 请描述具体问题和适用场景。
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 已有依据
+      description: 有哪些可公开的测试、文档或观察支持这个问题？
+  - type: textarea
+    id: falsification
+    attributes:
+      label: 如何验证
+      description: 什么实验或结果可以证明当前判断正确或错误？
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: 信息安全确认
+      options:
+        - label: 内容不包含凭据、真实账户或要求执行真实资金交易的信息。
+          required: true
