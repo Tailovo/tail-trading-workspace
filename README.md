@@ -16,7 +16,7 @@ TAIL 当前以 Solana 作为第一个参考市场。长期目标不是再做一�
 
 [查看界面与功能导览](PRODUCT-TOUR.md)
 
-[观看约 52 秒演示视频](https://github.com/Tailbot/tail-trading-workspace/releases/download/v0.0.1-preview/tail-early-preview-2026-09-01.mp4) · [查看预览版本](https://github.com/Tailbot/tail-trading-workspace/releases/tag/v0.0.1-preview)
+[观看约 52 秒演示视频](https://github.com/Tailovo/tail-trading-workspace/releases/download/v0.0.1-preview/tail-early-preview-2026-09-01.mp4) · [查看预览版本](https://github.com/Tailovo/tail-trading-workspace/releases/tag/v0.0.1-preview)
 
 ## 现在可以看到什么
 

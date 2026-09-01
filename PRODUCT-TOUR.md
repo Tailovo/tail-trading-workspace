@@ -40,7 +40,7 @@
 
 ## 演示视频
 
-约 52 秒的早期版本演示包含简洁片头、功能章节提示和开发状态说明，已经作为 [v0.0.1-preview Release 资产](https://github.com/Tailbot/tail-trading-workspace/releases/download/v0.0.1-preview/tail-early-preview-2026-09-01.mp4) 单独发布。这样可以直接在线观看或下载，也不会让仓库的每次克隆都携带视频历史。
+约 52 秒的早期版本演示包含简洁片头、功能章节提示和开发状态说明，已经作为 [v0.0.1-preview Release 资产](https://github.com/Tailovo/tail-trading-workspace/releases/download/v0.0.1-preview/tail-early-preview-2026-09-01.mp4) 单独发布。这样可以直接在线观看或下载，也不会让仓库的每次克隆都携带视频历史。
 
 ## 仍在继续
 
