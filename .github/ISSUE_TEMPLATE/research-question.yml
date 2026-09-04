@@ -2,7 +2,7 @@ name: 研究问题
 description: 讨论交易系统架构、可靠性、规模和市场适配问题
 title: "[研究] "
 labels:
-  - research
+  - question
 body:
   - type: textarea
     id: question

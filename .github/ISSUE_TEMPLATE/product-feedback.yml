@@ -1,49 +1,34 @@
-name: 产品建议
-description: 提交真实工作场景、问题和产品建议
+name: 分享一个需求
+description: 写一个你希望 TAIL 帮忙解决的具体场景，无需准备测试报告
 title: "[建议] "
 labels:
-  - product-feedback
+  - enhancement
 body:
   - type: markdown
     attributes:
-      value: 请勿提交私钥、令牌、真实账户或未脱敏交易信息。
-  - type: dropdown
-    id: user_type
+      value: 欢迎分享想法。一个具体场景就够了；请勿提交凭据、真实账户或未脱敏交易记录。
+  - type: textarea
+    id: problem
     attributes:
-      label: 使用者类型
-      options:
-        - 量化研究者
-        - 策略开发者
-        - 跟单系统使用者
-        - 软件开发者
-        - 其他
+      label: 你希望解决什么问题？
+      description: 你在做什么，哪个步骤最不方便、最耗时或最容易出错？
+      placeholder: 例如：研究多个钱包时，我需要反复切换页面才能比较买入和退出的过程……
     validations:
       required: true
   - type: textarea
     id: current_workflow
     attributes:
-      label: 当前工作方式
-      description: 现在怎样完成这项工作？
-    validations:
-      required: true
-  - type: textarea
-    id: problem
-    attributes:
-      label: 核心问题
-      description: 最浪费时间、最容易出错或风险最高的步骤是什么？
-    validations:
-      required: true
+      label: 你现在怎么做？（可选）
+      description: 可以介绍现有工具或处理方式，无需提供账户信息。
   - type: textarea
     id: expected_result
     attributes:
-      label: 期望结果
-      description: 什么结果能证明问题真正得到解决？
-    validations:
-      required: true
+      label: 什么结果对你有帮助？（可选）
+      description: 可以描述想看到的信息或希望减少的操作。
   - type: checkboxes
     id: safety
     attributes:
-      label: 信息安全确认
+      label: 公开信息确认
       options:
-        - label: 我没有提交私钥、令牌、真实账户或未脱敏交易信息。
+        - label: 内容不包含凭据、真实账户或未脱敏交易记录。
           required: true

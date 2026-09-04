@@ -2,6 +2,16 @@
 
 路线图描述验证顺序，不承诺日期。只有前一阶段形成可复核证据，后一阶段才晋级。
 
+当前以个人自用验证为主线，公开仓库同步展示适合公开的阶段成果和预览体验。这里优先回答“下一次能看到什么进展”。
+
+| 阶段 | 可关注的结果 |
+| --- | --- |
+| 已公开 | 0.4.1 Windows 桌面预览、合成回测和固定样本导览 |
+| 下一里程碑 | 从一条脱敏事件追到每一步状态与最终证据的只读流程 |
+| 随后验证 | 重复事件、乱序、断线和重启后的模拟核对与恢复 |
+
+公开更新会在[开发日志](CHANGELOG.md)记录，软件预览通过 [Releases](https://github.com/Tailovo/tail-trading-workspace/releases) 发布。欢迎[分享你最需要的使用场景](https://github.com/Tailovo/tail-trading-workspace/issues/new?template=product-feedback.yml)，帮助判断哪些细节值得优先验证。
+
 ## 已完成：可运行公开预览
 
 - 当前桌面工作区、分组导航和工具区；

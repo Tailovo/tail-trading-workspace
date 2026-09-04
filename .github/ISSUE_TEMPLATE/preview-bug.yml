@@ -1,0 +1,49 @@
+name: 预览使用问题
+description: 报告 Windows 安装、启动、界面或状态说明方面的问题
+title: "[预览问题] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: 请描述可观察到的问题。日志和截图请先脱敏；敏感安全问题请先阅读仓库的 SECURITY.md。
+  - type: textarea
+    id: problem
+    attributes:
+      label: 遇到了什么问题？
+      description: 请说明实际结果和你预期看到的结果。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 怎样遇到这个问题？
+      description: 尽量写出操作步骤；偶发或无法复现也请说明。
+    validations:
+      required: true
+  - type: dropdown
+    id: package_type
+    attributes:
+      label: 使用的预览包（可选）
+      options:
+        - Windows 安装版
+        - Windows 便携版
+        - 尚未下载，仅浏览仓库
+        - 不清楚
+  - type: input
+    id: environment
+    attributes:
+      label: 环境与版本（可选）
+      description: 例如 TAIL 0.4.1、Windows 11、显示缩放 125%。
+  - type: textarea
+    id: context
+    attributes:
+      label: 补充材料（可选）
+      description: 可附脱敏截图、日志摘要或安装包 SHA-256 校验结果。
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: 公开信息确认
+      options:
+        - label: 内容不包含凭据、真实账户、未脱敏交易记录或可利用的敏感安全细节。
+          required: true
