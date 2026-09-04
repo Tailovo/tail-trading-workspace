@@ -1,47 +1,57 @@
-# TAIL 界面与功能导览
+# TAIL 0.4.1 界面导览
 
-这组图片来自 TAIL 当前的早期开发版本。它们用于展示工作台已经形成的产品表面，也会如实保留当前未接入、不可用或未证明的状态。
+以下截图来自当前候选包或同一候选源码的 UI Harness。状态、合成样本和 Fixture 均按原样标注，不代表真实账户或实时市场。
 
 ## 运行总览
 
-总览页把本地服务、执行账户、实时信号、持仓与自动执行状态放在同一处，并明确标出当前可核实事实与下一项安全条件。
+主工作区取消了旧式大卡片堆叠，改成更连续的信息层级；左侧使用分组导航，右侧保留可切换工具区。
 
-![TAIL 运行总览](assets/screenshots/tail-overview-early-preview.png)
+![TAIL 运行总览](assets/screenshots/tail-overview-v0.4.1.png)
 
-## 可调工作区与行情面板
+## 行情与 K 线工具区
 
-右侧面板可以按需要展开和调整空间。当前没有完整、可核实的跟单源关联事件时，行情区域直接显示暂不可用，不用虚构 K 线填满画面。
+右侧可以切换到行情与 K 线模式。公开包不携带可核实行情源，因此图中如实显示暂不可用。
 
-![TAIL 行情与 K 线面板](assets/screenshots/tail-market-panel-early-preview.png)
+![TAIL 行情与 K 线工具区](assets/screenshots/tail-market-panel-v0.4.1.png)
 
-## 策略注册表与运行边界
+## 内置研究浏览器
 
-策略页把已安装、规划中、实验策略、运行模式和版本集中展示；右侧状态区同步显示签名能力、真实环境验证与人工触发条件。已安装只表示策略进入注册表，不等于获得真钱自动执行权限。
+浏览器工具区提供独立的 HTTPS 研究入口，并显示隔离配置。截图没有主动打开远程页面。
 
-![TAIL 策略与运行状态](assets/screenshots/tail-strategy-runtime-early-preview.png)
+![TAIL 内置浏览器](assets/screenshots/tail-browser-panel-v0.4.1.png)
 
-## 命令中心
+## 公开研究工作台
 
-命令中心用于快速打开页面、定位当前对象和进入证据或诊断区域。真钱操作不会从命令中心执行，避免把导航捷径误做成高风险操作入口。
+公开构建保留研究工作流的产品表面，但私有研究任务脚本被物理排除，按钮保持只读。
 
-![TAIL 命令中心](assets/screenshots/tail-command-center-early-preview.png)
+![TAIL 公开研究工作台](assets/screenshots/tail-research-public-preview-v0.4.1.png)
 
-## 本地诊断
+## 合成回测
 
-系统页集中展示本地服务、行情通道、自动交易边界、诊断服务、线程、审批和修复记录。它的作用是帮助开发和排查，不会因为诊断服务已连接就推导出交易通道已经可用。
+数据分析页可以运行内置合成样本，结果区域明确写明“合成样本”，只验证界面与数据链路，不证明收益。
 
-![TAIL 本地诊断](assets/screenshots/tail-diagnostics-early-preview.png)
+![TAIL 合成回测](assets/screenshots/tail-backtest-synthetic-v0.4.1.png)
 
-## 市场边界与个性化
+## 持仓 Fixture
 
-工作台预留了 A 股交易时段、市场和执行适配边界，但截图中的未接入状态也说明：这只是界面与数据契约层面的准备，不代表 A 股量化或券商交易已经完成。个性化作为辅助能力，支持主题颜色、背景、透明度、工作区布局和助手外观。
+100 条持仓是用于布局和滚动验证的固定 Fixture，界面明确标注 TEST / FIXTURE，不是用户账户数据。
 
-![TAIL 市场边界与个性化](assets/screenshots/tail-market-boundary-personalization-early-preview.png)
+![TAIL 持仓 Fixture](assets/screenshots/tail-positions-fixture-v0.4.1.png)
 
-## 演示视频
+## 个性化与助手
 
-约 52 秒的早期版本演示包含简洁片头、功能章节提示和开发状态说明，已经作为 [v0.0.1-preview Release 资产](https://github.com/Tailovo/tail-trading-workspace/releases/download/v0.0.1-preview/tail-early-preview-2026-09-01.mp4) 单独发布。这样可以直接在线观看或下载，也不会让仓库的每次克隆都携带视频历史。
+设置页保留背景、透明度、颜色、减少动画和助手显示/位置等本地偏好。这些设置不会改变交易、签名或广播权限。
 
-## 仍在继续
+![TAIL 个性化设置](assets/screenshots/tail-personalization-v0.4.1.png)
 
-现在看到的不是最终版本。TAIL 仍在持续开发，界面、交互、数据接入与能力边界都会继续调整；截图和视频不构成真实资金、数千级容量或多市场实盘已经完成的证明。
+## 后端断连状态
+
+当本地产品状态不可核实时，系统页显示未连接与等待状态，不使用历史值填充。
+
+![TAIL 后端断连状态](assets/screenshots/tail-system-offline-v0.4.1.png)
+
+## 历史视频
+
+[v0.0.1-preview 的约 52 秒视频](https://github.com/Tailovo/tail-trading-workspace/releases/download/v0.0.1-preview/tail-early-preview-2026-09-01.mp4) 保留为历史记录。视频中的旧 UI 不代表当前 0.4.1。
+
+当前仍不是最终版本。界面、交互、数据接入和能力边界会继续调整。

@@ -1,44 +1,59 @@
 {
-  "schema": "tail-showcase-public-export-manifest/1",
-  "status": "DRAFT_NOT_APPROVED_FOR_EXPORT",
-  "generatedOn": "2026-09-01",
-  "sourceSnapshots": {
-    "integrationMain": "15015a3c730e86a2a694d840912ea62b943b775e",
-    "uiCandidate": "9b118ca4835e80a0a4d4a22cc3d80bd6c6d11224"
+  "schema": "tail-showcase-public-export-manifest/2",
+  "status": "PUBLIC_PREVIEW_RELEASE_CANDIDATE",
+  "generatedOn": "2026-09-04",
+  "releaseTag": "v0.4.1-preview",
+  "sourceSnapshot": {
+    "integrationMain": "6b87e9463e82dc9b2bdd465a452221f3b825b7a2"
   },
-  "includeCandidates": [
-    "minimal Electron desktop shell without production execution hooks",
-    "six primary workspace routes with Simplified Chinese as the current default",
-    "layout, theme, background and assistant appearance preferences",
-    "six manually reviewed early-version interface screenshots",
-    "sanitized demo video distributed as a GitHub Release asset rather than Git history",
-    "sanitized offline Product API fixtures",
-    "simplified read-only HTTPS browser policy",
-    "market-neutral architecture and reproducible capacity-test methodology",
-    "Showcase-only tests, documentation and packaging"
+  "verification": {
+    "testFilesPassed": 158,
+    "testFilesSkipped": 1,
+    "testsPassed": 2049,
+    "testsSkipped": 5,
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "serviceBuild": "PASS",
+    "webBuild": "PASS",
+    "desktopBuild": "PASS",
+    "smokeExitCode": 0,
+    "asarFileCount": 9,
+    "sourceMapsFound": 0,
+    "taskScriptFilesFound": 0,
+    "harnessFilesFound": 0,
+    "productionLauncherMarkersFound": 0,
+    "productionCanaryMarkersFound": 0,
+    "knownWalletAddressesFound": 0,
+    "privatePathsFound": 0,
+    "likelyCredentialsFound": 0
+  },
+  "artifacts": [
+    {
+      "name": "TAIL-V0.4.1-Preview-Portable-x64.exe",
+      "bytes": 90707559,
+      "sha256": "2F579E10EEFEA866D38C23BC37F39E47FC1401EC4E79B10CD5C9D26B32DEC7F0",
+      "authenticode": "NOT_SIGNED",
+      "localDefenderScan": "NO_THREATS_FOUND"
+    },
+    {
+      "name": "TAIL-V0.4.1-Preview-Setup-x64.exe",
+      "bytes": 90942129,
+      "sha256": "E5E346F0EFF166ED820E162770982167B5079CAEFD0EC909A27EB751C7837BBB",
+      "authenticode": "NOT_SIGNED",
+      "localDefenderScan": "NO_THREATS_FOUND"
+    }
   ],
-  "excludeRequired": [
-    "platform/execution/real-copy/**",
-    "production launchers, issuer, canary runner and credential provisioning",
-    "audit/**",
-    "governance/**",
-    "external Evidence and Project-Control paths",
-    "complete repair-agent internals",
-    "unverified generated Codex types",
-    "apps/web/out/**",
-    "historical chats, screenshots, evidence and internal plans",
-    "secrets, wallets, tokens and production configuration"
-  ],
-  "releaseGates": [
-    "LICENSE_DECIDED",
-    "SOURCE_PROVENANCE_VERIFIED",
-    "ASSET_RIGHTS_VERIFIED",
-    "SECRET_AND_HISTORY_SCAN_PASS",
-    "SANITIZED_FIXTURES_READY",
-    "CLEAN_BUILD_AND_TEST_PASS",
-    "PACKAGE_CONTENT_REVIEW_PASS",
-    "PUBLIC_CONTACT_AND_SECURITY_CHANNEL_READY"
+  "screenshots": [
+    {"name": "tail-overview-v0.4.1.png", "sha256": "1FF98C6912852F21C087FB46684FF25F4E853E7FEA2AC0C0868B6B5AD45C370E"},
+    {"name": "tail-market-panel-v0.4.1.png", "sha256": "D8960B4ABC0241408D5D9C40C182A4805B8CE52048D4BF46B1DE88CDE8883011"},
+    {"name": "tail-browser-panel-v0.4.1.png", "sha256": "81FFD24C79026AF9428FF26CE31ABA4AB274166A9F7B2835E7E28EAE7740F9DC"},
+    {"name": "tail-research-public-preview-v0.4.1.png", "sha256": "079D3AE4262C3EDFE8E8E67B787C85C7EB10E140A36603056B6F03F62035B42B"},
+    {"name": "tail-backtest-synthetic-v0.4.1.png", "sha256": "B865C443CF91A99F288D0C1DC779FEBF18F7AB51F72449343587C29C412A4C92"},
+    {"name": "tail-positions-fixture-v0.4.1.png", "sha256": "CB1268164A8D8FC97A6E9404DE4695AAFFD180BBB52E4AB9BDD7038D80EA5BC6"},
+    {"name": "tail-personalization-v0.4.1.png", "sha256": "A8616681B899803780A926BD8EFDC13FBB81861F221CF9173A73605BD121CA1D"},
+    {"name": "tail-system-offline-v0.4.1.png", "sha256": "357D973EC9A90B0D266DBD0702BFD6DB57026BD7EB9270FE954929B391822695"}
   ],
   "realMoneyAuthority": false,
-  "remoteRepositoryCreated": true
+  "sourceCodeIncluded": false,
+  "licenseGranted": false
 }
