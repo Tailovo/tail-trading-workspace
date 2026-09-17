@@ -1,0 +1,83 @@
+{
+  "schema": "tail-development-screenshots/1",
+  "capturedOn": "2026-09-17",
+  "kind": "ISOLATED_DEVELOPMENT_UI",
+  "sourceReference": "b2aa04aac72104efc8cbb1c50561a92eaa69ad2b",
+  "existingWebExportDate": "2026-09-16",
+  "viewport": {
+    "width": 1600,
+    "height": 1080
+  },
+  "session": "CONFIG_REQUIRED_EMPTY_TEST_BRIDGE",
+  "realWalletData": false,
+  "transactionServiceConnected": false,
+  "publicBinaryChanged": false,
+  "screenshots": [
+    {
+      "path": "assets/screenshots/development-2026-09-17/overview.png",
+      "page": "运行总览",
+      "bytes": 191226,
+      "sha256": "b0ffdaf347c14857591b200deeb061f7b115c2b8432538a57722412319481c5d"
+    },
+    {
+      "path": "assets/screenshots/development-2026-09-17/execution.png",
+      "page": "交易执行",
+      "bytes": 176898,
+      "sha256": "f0c67dbafba77b506fa0d0b8b01dfe05ddd18f02b1a1a76e60c239cf31b762ab"
+    },
+    {
+      "path": "assets/screenshots/development-2026-09-17/positions.png",
+      "page": "持仓与退出",
+      "bytes": 130630,
+      "sha256": "0c6135c78845156c2be164a3507a3f47450093862096825dda7c6e87d01bb08a"
+    },
+    {
+      "path": "assets/screenshots/development-2026-09-17/signals.png",
+      "page": "实时信号",
+      "bytes": 109333,
+      "sha256": "a4c8b49e3523c338458933a09616bd96931e7d9cdf7f24f768c479311995a26b"
+    },
+    {
+      "path": "assets/screenshots/development-2026-09-17/opportunities.png",
+      "page": "机会观察",
+      "bytes": 105709,
+      "sha256": "dd75ff07dfa312014e7b137de338d19be57d18c9676ed8fb863182df5bb7783d"
+    },
+    {
+      "path": "assets/screenshots/development-2026-09-17/rules.png",
+      "page": "自动跟单规则",
+      "bytes": 158217,
+      "sha256": "5ecf40dc79cc159d407edbf842bb7620d8468b66faaf61d14ac6ce1c5e6fa8bc"
+    },
+    {
+      "path": "assets/screenshots/development-2026-09-17/analytics.png",
+      "page": "数据分析",
+      "bytes": 169406,
+      "sha256": "516abdcf59257f64082e1dd9d7ab331d71cae3d870f85d331cc81a1f4d001719"
+    },
+    {
+      "path": "assets/screenshots/development-2026-09-17/research.png",
+      "page": "研究工作台",
+      "bytes": 180479,
+      "sha256": "87405734bb45f2515f64ee9f9f8b33d1e1c818586e23171f5bc4b375e1d6d79e"
+    },
+    {
+      "path": "assets/screenshots/development-2026-09-17/system.png",
+      "page": "系统状态",
+      "bytes": 145983,
+      "sha256": "b2f0e3812b251e51973ba466fcb5a235b1485499ca642708d0a279763a58096d"
+    },
+    {
+      "path": "assets/screenshots/development-2026-09-17/diagnostics.png",
+      "page": "诊断与证据",
+      "bytes": 157462,
+      "sha256": "5bcf164adf51fa5f2ebacb2181689b09a131a2ede7974da8128cf7c86c696d26"
+    },
+    {
+      "path": "assets/screenshots/development-2026-09-17/settings.png",
+      "page": "设置",
+      "bytes": 168633,
+      "sha256": "21c0c74ca1fa48592622562e09ca82c2582d2a6e287b5f0954c4774a77e825f2"
+    }
+  ]
+}

@@ -1,10 +1,9 @@
 flowchart LR
-    EVENT[市场或账户事件] --> NORMALIZE[规范化]
-    NORMALIZE --> DECIDE[跟单或策略决策]
-    DECIDE --> CHECK[账户、组合与能力检查]
-    CHECK --> INTENT[幂等订单意图]
-    INTENT --> ADAPTER[市场适配器]
-    ADAPTER --> RESULT[执行回报]
-    RESULT --> RECON[核对与状态收敛]
-    RECON --> EVIDENCE[事件与证据]
-    EVIDENCE --> OBSERVE[控制台与告警]
+    SOURCE["复用同一来源监听与恢复"] --> ROUTER["复用同一动作路由"]
+    ROUTER --> BUDGET["共享钱包预算"]
+    BUDGET --> L1["仓位 1 状态与执行"]
+    BUDGET --> LN["仓位 N 状态与执行"]
+    L1 --> RECON["确认 对账 持久化"]
+    LN --> RECON
+    RECON --> VIEW["统一会话读模型"]
+    VIEW --> UI["桌面与诊断界面"]

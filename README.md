@@ -1,63 +1,53 @@
 # TAIL
 
-> 正在开发的 Solana 桌面交易工作台。
+**个人借助 AI 开发的 Solana 桌面跟单与交易状态工作台。**
 
-TAIL 从个人自用需求出发，探索把钱包观察、跟单研究和执行状态放进一个可追踪的工作流程。这里公开阶段成果、早期预览和下一步计划，也欢迎你分享实际使用场景。
+从自己的使用需求出发，我使用 Codex 推进 TAIL 的需求拆解、技术实现、运行验证和迭代。项目把来源钱包事件、跟随执行、持仓和最终对账放在同一个桌面工作区，持续处理真实运行中暴露的问题。
 
-**当前：0.4.1 · Windows x64 · 只读预览。** 可以体验桌面工作区、合成回测与固定样本浏览；公开包不接入真实钱包或实时行情，不提供真实交易能力。
+**项目进展更新：2026-09-17。公开下载仍为 `v0.4.1-preview`，只提供只读体验。** 私有开发版已出现真实自动买卖闭环成功案例，当前重点是来源监听恢复、事件顺序与执行延迟。历史成功不代表当前版本已经持续稳定运行。
 
-[一分钟图文导览](PRODUCT-TOUR.md) · [下载当前预览](https://github.com/Tailovo/tail-trading-workspace/releases/tag/v0.4.1-preview) · [下一步计划](ROADMAP.md) · [分享一个需求](https://github.com/Tailovo/tail-trading-workspace/issues/new?template=product-feedback.yml)
+[界面导览](PRODUCT-TOUR.md) · [Windows 只读预览](https://github.com/Tailovo/tail-trading-workspace/releases/tag/v0.4.1-preview) · [当前架构](ARCHITECTURE.md) · [工程与 AI 协作](docs/ENGINEERING.md) · [当前状态](STATUS.md)
 
-![TAIL 0.4.1 运行总览：桌面工作区与右侧状态工具区，当前未连接实盘数据](assets/screenshots/tail-overview-v0.4.1.png)
+![TAIL 开发界面运行总览，2026-09-17 隔离空会话截图，未连接交易服务](assets/screenshots/development-2026-09-17/overview.png)
 
-## TAIL 想解决什么
+上图是当前开发界面在隔离截图环境中的实际渲染，使用空会话测试桥接；它不代表公开安装包已更新，也不代表当前存在真实持仓或交易。全部页面与截图来源见[界面导览](PRODUCT-TOUR.md)。
 
-观察钱包之后，为什么跟随或放弃？执行进展到哪一步？中断后怎样核对和继续？TAIL 希望把这些信息串起来，让研究过程和执行状态都有迹可循。
+## 产品现在做到了哪里
 
-如果你在研究 Solana 钱包、尝试个人跟单工具，或关心自动化交易的状态与恢复问题，欢迎关注这个项目的验证过程。
-
-## 当前可以体验什么
-
-| 想先了解 | 在预览中看什么 |
-| --- | --- |
-| 工作流程怎样组织 | 分组导航、运行总览与可切换的右侧工具区 |
-| 数据结果怎样呈现 | 运行内置合成回测，查看结果与数据来源标识 |
-| 信息较多时怎样浏览 | 查看持仓固定样本的排列与滚动效果 |
-| 工作区是否顺手 | 调整主题、背景、透明度及助手的位置和显示 |
-
-合成回测与 Fixture（固定测试样本）用于展示界面和数据链路，不代表真实交易或收益。没有接入的数据会显示“未连接”或“暂不可用”。[按三步浏览当前界面 →](PRODUCT-TOUR.md)
-
-## 下一次更新看什么
-
-| 阶段 | 关注点 |
-| --- | --- |
-| 已公开 | 可运行的 Windows 桌面预览与当前界面导览 |
-| 下一里程碑 | 从一条脱敏事件，追到每一步状态和最终证据的只读流程 |
-| 随后验证 | 在模拟环境中处理重复事件、断线与重启，观察核对和恢复结果 |
-
-下一里程碑的验收方式是：第一次使用的人也能从输入追到最终证据，看清哪些信息已知、哪些仍然缺失。它是下一步计划，尚未作为本次公开包的完整能力交付。进展以验证结果为准，[查看完整路线图](ROADMAP.md)。
-
-## 下载 Windows 预览
-
-| 版本 | 适合场景 | 下载 |
+| 范围 | 已有成果 | 当前限制 |
 | --- | --- | --- |
-| 安装版 | 安装到当前 Windows 用户 | [TAIL-V0.4.1-Preview-Setup-x64.exe](https://github.com/Tailovo/tail-trading-workspace/releases/download/v0.4.1-preview/TAIL-V0.4.1-Preview-Setup-x64.exe) |
-| 便携版 | 不安装，直接运行单个 EXE | [TAIL-V0.4.1-Preview-Portable-x64.exe](https://github.com/Tailovo/tail-trading-workspace/releases/download/v0.4.1-preview/TAIL-V0.4.1-Preview-Portable-x64.exe) |
+| 公开下载版 | Windows 安装版与便携版、工作区、合成回测、固定样本、个性化 | 2026-09-04 的只读预览，无真实交易能力 |
+| 私有开发版 | 会话配置、来源动作路由、逐仓执行、预算与持仓读模型；历史自动买卖闭环案例 | 来源恢复与延迟仍在处理，多仓持续实盘表现未完成验证 |
+| 本次公开更新 | 11 张开发界面截图、当前调用架构、工程案例、更新后的路线图 | 文档与截图更新，不是新安装包发布 |
 
-**下载前请了解：** 这是早期只读预览，没有钱包连接、签名、广播、真实下单或自动卖出能力。EXE 尚未进行 Authenticode 代码签名，Windows 可能显示未知发布者或 SmartScreen 提示。请只从本仓库 Release 下载，并核对 [SHA256SUMS.txt](https://github.com/Tailovo/tail-trading-workspace/releases/download/v0.4.1-preview/SHA256SUMS.txt)。
+## 想解决的具体问题
 
-0.4.1 发布候选已记录构建、测试、包内容审计与烟雾检查结果；这些是该候选的验证记录，不构成安全或收益保证。[发布说明与校验值](RELEASE-NOTES-0.4.1.md) · [公开范围与发布检查](PUBLIC-SCOPE.md) · [安全边界](SECURITY-BOUNDARY.md)
+- 跟随来源交易时，看清事件进入、执行与对账分别到了哪一步。
+- 发生中断时，保留持仓、未决交易和来源状态，避免把“已提交”误当成“已成交”。
+- 将一个仓位和多个仓位放在可复用的会话、路由与执行结构中，逐步验证容量。
+- 让实际运行问题有记录、可以复现，并能判断一次修改是否改善了目标行为。
 
-## 参与和关注
+## 项目实现与个人贡献
 
-- **分享场景：** [说说你希望 TAIL 帮你解决什么问题](https://github.com/Tailovo/tail-trading-workspace/issues/new?template=product-feedback.yml)，可以只写一个具体场景，无需准备测试报告。
-- **体验反馈：** [报告安装或界面问题](https://github.com/Tailovo/tail-trading-workspace/issues/new?template=preview-bug.yml)，或先查看[反馈指南](FEEDBACK.md)。
-- **关注进展：** 用 Star 收藏项目；需要版本通知时，可在 GitHub 的 Watch → Custom 中选择 Releases。[开发日志](CHANGELOG.md)会说明每次公开更新的内容。
+项目使用 **TypeScript、Electron、React / Next.js、Node.js / Fastify**，并集成 Solana 数据与交易接口。技术栈描述项目实现，不表示所有底层代码均为本人独立编写。
 
-请勿在公开反馈中提交凭据、真实账户或未脱敏交易记录。安全问题见 [SECURITY.md](SECURITY.md)；目前尚未提供独立的保密安全联系渠道。
+我负责产品目标、使用场景、运行反馈与结果验收，借助 Codex 推进技术方案、编码、测试和交付。大量实现由 AI 参与完成；设计与实现结论通过代码、运行记录和针对性验证核对。[查看具体工作方式与工程案例](docs/ENGINEERING.md)。
 
-## 进一步了解
+当前仓库公开产品资料、截图和预览安装包，**主项目源码暂未开放**。架构说明和工程记录不能替代公开可运行源码；可公开代码范围仍待整理。
 
-[当前状态](STATUS.md) · [能力边界](CAPABILITIES.md) · [平台架构](ARCHITECTURE.md) · [规模与市场边界](SCALE-AND-MARKETS.md)
+## 下载与体验
 
-当前仓库用于公开展示和早期预览，未开放私有主项目源码，也没有开源许可证。安装包仅供评估本次预览；公开可见不代表允许复制、修改或再分发。界面、交互和数据接入会随验证继续调整。
+| Windows x64 | 下载 |
+| --- | --- |
+| 安装版 | [TAIL 0.4.1 Preview Setup](https://github.com/Tailovo/tail-trading-workspace/releases/download/v0.4.1-preview/TAIL-V0.4.1-Preview-Setup-x64.exe) |
+| 便携版 | [TAIL 0.4.1 Preview Portable](https://github.com/Tailovo/tail-trading-workspace/releases/download/v0.4.1-preview/TAIL-V0.4.1-Preview-Portable-x64.exe) |
+
+公开包不连接真实钱包、不签名、不广播、不执行买卖。EXE 未进行 Authenticode 代码签名；从本仓库 Release 下载，并核对 [SHA256SUMS.txt](https://github.com/Tailovo/tail-trading-workspace/releases/download/v0.4.1-preview/SHA256SUMS.txt)。[原版本发布说明](RELEASE-NOTES-0.4.1.md)保留该版本的历史验证记录。
+
+## 下一步
+
+优先完成当前来源会话的恢复与顺序处理，记录来源事件到执行确认的分段耗时，再验证相同核心在不同仓位容量下的表现。公开展示复用已有界面与只读实现，不另外建立一套交易引擎。[具体里程碑](ROADMAP.md)。
+
+[提交体验问题](https://github.com/Tailovo/tail-trading-workspace/issues/new?template=preview-bug.yml) · [分享使用场景](https://github.com/Tailovo/tail-trading-workspace/issues/new?template=product-feedback.yml) · [开发日志](CHANGELOG.md)
+
+公开内容没有授予开源许可证；使用范围见[公开范围](PUBLIC-SCOPE.md)，敏感问题见 [SECURITY.md](SECURITY.md)。

@@ -1,11 +1,22 @@
 flowchart TB
-    UI[Electron 桌面控制台] --> CP[市场无关控制层]
-    CP --> SIGNAL[信号与跟单关系]
-    CP --> STRATEGY[自主策略生命周期]
-    CP --> RISK[账户、组合与风险]
-    CP --> INTENT[幂等订单意图]
-    CP --> STATE[核对、恢复与证据]
-    INTENT -. 市场适配 .-> SOL[Solana]
-    INTENT -. 市场适配 .-> CEX[数字资产交易平台]
-    INTENT -. 市场适配 .-> OTHER[其他市场]
-    STATE --> UI
+    UI["Electron 内的 React / Next.js 界面"]
+    IPC["preload IPC 与桌面会话服务"]
+    WORKER["wallet-source 会话运行器"]
+    SOURCE["Solana 来源数据 HTTP / WebSocket"]
+    BRIDGE["实时接收 历史补齐 排序与去重"]
+    ROUTER["来源动作路由"]
+    PORTFOLIO["共享钱包预算与仓位分配"]
+    LANE["逐仓执行通道"]
+    EXEC["报价 模拟 执行与确认"]
+    STATE["journal 与持久化快照"]
+    VIEW["会话 仓位与分析读模型"]
+    API["独立只读研究 Product API"]
+    UI --> IPC --> WORKER
+    SOURCE --> BRIDGE --> ROUTER
+    WORKER --> BRIDGE
+    WORKER --> PORTFOLIO
+    ROUTER --> PORTFOLIO --> LANE --> EXEC
+    EXEC --> STATE
+    BRIDGE --> STATE
+    STATE --> VIEW --> IPC
+    UI -. 研究与观察 .-> API

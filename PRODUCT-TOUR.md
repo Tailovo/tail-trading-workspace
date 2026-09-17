@@ -1,89 +1,95 @@
-# 一分钟了解 TAIL 0.4.1
+# TAIL 界面导览
 
-先用三组截图看看 TAIL 正在怎样组织工作区、呈现数据和区分样本。感兴趣后，再[下载 Windows 预览](https://github.com/Tailovo/tail-trading-workspace/releases/tag/v0.4.1-preview)体验本地交互。
+更新日期：2026-09-17。先看当前开发界面，再看可下载的历史公开预览。
 
-以下截图来自 0.4.1 候选包或同一候选源码的 UI Harness（界面测试环境）。合成样本和 Fixture 均保留原有标识，不代表真实账户、实时市场或已完成的实盘流程。
+## 当前开发界面
 
-## 第一步：了解工作区
+本组 11 张图片来自现有 2026-09-16 Web 导出，在隔离浏览器中实际渲染。测试桥接提供未配置的空会话；除本地静态资源外的请求被阻止，未读取生产持仓、凭据或活动。右下角保留截图环境标识。
 
-左侧按运行、研究和系统分组，中央展示当前页面，右侧保留状态、行情、浏览器及诊断工具入口。先看布局是否符合你的习惯，再看状态说明是否容易理解。
+这些图片展示界面和空状态，不证明 Electron IPC、网络恢复或实盘交易通过，也不意味着 9 月 4 日的公开安装包包含这些新界面。
 
-图中的“未连接”“未知”和“已锁定”对应当前公开预览的数据与执行边界。
+### 运行总览
 
-![TAIL 运行总览：分组导航、中央工作区与右侧状态面板](assets/screenshots/tail-overview-v0.4.1.png)
+会话状态、实际仓位和未决动作使用同一份会话投影。
 
-## 第二步：看一次合成回测的结果
+![运行总览，开发界面隔离空状态截图](assets/screenshots/development-2026-09-17/overview.png)
 
-数据分析页的“本地回测入口”可以运行内置合成样本。这里可以体验参数输入、运行操作和结果呈现；结果区域会明确说明样本来源。
+### 交易执行
 
-下图展示的是合成样本运行结果，只用于验证界面与数据链路，不证明历史或未来收益。
+当前会话配置表单，空配置展示输入校验；截图没有保存配置或启动。
 
-![TAIL 数据分析：已运行的内置合成样本及结果标识](assets/screenshots/tail-backtest-synthetic-v0.4.1.png)
+![交易执行，开发界面隔离空状态截图](assets/screenshots/development-2026-09-17/execution.png)
 
-## 第三步：看多条信息怎样排列
+### 持仓与退出
 
-这组持仓视图使用 100 条固定测试样本，展示列表排列、信息密度与滚动场景。TEST / FIXTURE 标识说明它们是测试数据，不是用户持仓，也不代表 100 仓真实执行能力。
+逐仓展示区分自动完成和外部人工处置；此处为空会话。
 
-![TAIL 持仓视图：标注 TEST / FIXTURE 的固定样本](assets/screenshots/tail-positions-fixture-v0.4.1.png)
+![持仓与退出，开发界面隔离空状态截图](assets/screenshots/development-2026-09-17/positions.png)
 
-看完后，可以[分享一个使用场景](https://github.com/Tailovo/tail-trading-workspace/issues/new?template=product-feedback.yml)，也可以继续看下面的工具区与设置。
+### 实时信号
 
-## 更多界面
+来源或研究事件为空时保持空状态。
 
-<details>
-<summary>行情与 K 线工具区</summary>
+![实时信号，开发界面隔离空状态截图](assets/screenshots/development-2026-09-17/signals.png)
 
-右侧可以切换到行情与 K 线模式。公开包不携带可核实行情源，因此截图显示暂不可用。
+### 机会观察
 
-![TAIL 行情与 K 线工具区](assets/screenshots/tail-market-panel-v0.4.1.png)
+观察候选不自动等于交易指令；截图未接入候选数据。
 
-</details>
+![机会观察，开发界面隔离空状态截图](assets/screenshots/development-2026-09-17/opportunities.png)
 
-<details>
-<summary>内置研究浏览器</summary>
+### 自动跟单规则
 
-浏览器工具区提供独立的 HTTPS 研究入口，并显示隔离配置。截图没有主动打开远程页面。
+当前固定配置与来源会话规则说明。
 
-![TAIL 内置浏览器](assets/screenshots/tail-browser-panel-v0.4.1.png)
+![自动跟单规则，开发界面隔离空状态截图](assets/screenshots/development-2026-09-17/rules.png)
 
-</details>
+### 数据分析
 
-<details>
-<summary>研究工作台</summary>
+会话时序与分析入口；没有真实会话时不填造结果。
 
-公开构建保留研究工作流的界面入口；私有研究任务脚本被物理排除，相关按钮保持只读。
+![数据分析，开发界面隔离空状态截图](assets/screenshots/development-2026-09-17/analytics.png)
 
-![TAIL 公开研究工作台](assets/screenshots/tail-research-public-preview-v0.4.1.png)
+### 研究工作台
 
-</details>
+截图模式锁定研究任务，只展示工作区。
 
-<details>
-<summary>个性化与助手</summary>
+![研究工作台，开发界面隔离空状态截图](assets/screenshots/development-2026-09-17/research.png)
 
-设置页保留背景、透明度、颜色、减少动画和助手显示/位置等本地偏好。这些设置不改变交易权限。
+### 系统状态
 
-![TAIL 个性化设置](assets/screenshots/tail-personalization-v0.4.1.png)
+展示服务和当前会话状态，未连接的服务明确显示未连接。
 
-</details>
+![系统状态，开发界面隔离空状态截图](assets/screenshots/development-2026-09-17/system.png)
 
-<details>
-<summary>后端断连状态</summary>
+### 诊断与证据
 
-当本地产品状态不可核实时，系统页显示未连接与等待状态，方便区分界面可用和数据是否就绪。
+查看运行路径与状态；截图不携带真实 journal。
 
-![TAIL 后端断连状态](assets/screenshots/tail-system-offline-v0.4.1.png)
+![诊断与证据，开发界面隔离空状态截图](assets/screenshots/development-2026-09-17/diagnostics.png)
 
-</details>
+### 设置
 
-## 接下来值得关注
+桌面外观、透明度、背景与助手设置界面。
 
-下一里程碑是让一条脱敏事件能被追踪到各步骤状态与最终证据。该流程仍是计划中的交付，具体验收方式见[路线图](ROADMAP.md)。
+![设置，开发界面隔离空状态截图](assets/screenshots/development-2026-09-17/settings.png)
 
-[下载当前预览](https://github.com/Tailovo/tail-trading-workspace/releases/tag/v0.4.1-preview) · [反馈一个问题](FEEDBACK.md) · [返回首页](README.md)
+## 可下载的公开预览 0.4.1
 
-<details>
-<summary>历史视频：0.0.1，约 52 秒</summary>
+以下图片保留原日期与版本，来自已发布的只读包或同版本 UI Harness。合成回测与固定样本不代表真实持仓、收益或容量。
 
-[查看 0.0.1 历史视频](https://github.com/Tailovo/tail-trading-workspace/releases/download/v0.0.1-preview/tail-early-preview-2026-09-01.mp4)。视频中的旧 UI 不代表当前 0.4.1。
+### 公开预览工作区
 
-</details>
+![公开预览工作区，历史 0.4.1 公开预览](assets/screenshots/tail-overview-v0.4.1.png)
+
+### 内置合成回测
+
+![内置合成回测，历史 0.4.1 公开预览](assets/screenshots/tail-backtest-synthetic-v0.4.1.png)
+
+### 固定持仓测试样本
+
+![固定持仓测试样本，历史 0.4.1 公开预览](assets/screenshots/tail-positions-fixture-v0.4.1.png)
+
+其他历史图片继续保留在 [截图目录](assets/screenshots/)。截图对应信息与 SHA-256 见 [本次图集清单](docs/screenshot-manifest-2026-09-17.json)。
+
+[下载公开预览](https://github.com/Tailovo/tail-trading-workspace/releases/tag/v0.4.1-preview) · [当前状态](STATUS.md) · [返回首页](README.md)
